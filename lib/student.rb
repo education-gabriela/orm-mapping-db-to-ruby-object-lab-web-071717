@@ -2,12 +2,6 @@ class Student
   attr_accessor :id, :name, :grade
   FIELDS = [:id, :name, :grade]
 
-  def initialize
-    @id = nil
-    @name = nil
-    @grade = nil
-  end
-
   def save
     sql = <<-SQL
       INSERT INTO students (name, grade) 
